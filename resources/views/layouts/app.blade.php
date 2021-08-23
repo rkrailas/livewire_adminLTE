@@ -84,6 +84,8 @@
     <!-- Select2 -->
     <script src="{{ asset('backend/plugins/select2/js/select2.full.min.js') }}"></script>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-3-typeahead/4.0.2/bootstrap3-typeahead.min.js" integrity="sha512-HWlJyU4ut5HkEj0QsK/IxBCY55n5ZpskyjVlAoV9Z7XQwwkqXoYdCIC93/htL3Gu5H3R4an/S0h2NXfbZk3g7w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
     <script>
     $(document).ready(function() {
         toastr.options = {

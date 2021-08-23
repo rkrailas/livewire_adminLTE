@@ -62,3 +62,4 @@ Route::group(['middleware' => ['auth']], function () // For Admin only > Route::
 Route::get('admin/users555',ListUsers555::class)->name('admin.users555');
 
 Route::get('getbuyer', GetBuyer::class); //For Test
+Route::get('getbuyer/action', [GetBuyer::class,'action'])->name('getbuyer.action'); //For Test
