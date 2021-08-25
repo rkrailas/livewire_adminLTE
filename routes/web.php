@@ -22,6 +22,9 @@ use App\Http\Livewire\AccStar\SoDeliveryTax;
 
 //For Test
 use App\Http\Livewire\GetBuyer;
+use App\Http\Livewire\TestAutoComplete;
+use App\Http\Livewire\TestAutoCompleteAjax;
+use App\Http\Livewire\ContactSearchBar;
 
 
 /*
@@ -59,7 +62,12 @@ Route::group(['middleware' => ['auth']], function () // For Admin only > Route::
     Route::get('accstar/products', Products::class); //Not Used
 });
 
+//For Test
 Route::get('admin/users555',ListUsers555::class)->name('admin.users555');
-
-Route::get('getbuyer', GetBuyer::class); //For Test
-Route::get('getbuyer/action', [GetBuyer::class,'action'])->name('getbuyer.action'); //For Test
+Route::get('getbuyer', GetBuyer::class); 
+Route::get('getbuyer/action', [GetBuyer::class,'action'])->name('getbuyer.action');
+Route::get('testautocomplete', TestAutoComplete::class);
+Route::get('findcustomers', [TestAutoComplete::class,'getCustomer'])->name('findcustomers');
+Route::get('autocomplete', TestAutoCompleteAjax::class);
+Route::post('autocomplete/fetch', [TestAutoCompleteAjax::class,'fetch']);
+Route::get('contactsearch', ContactSearchBar::class); 

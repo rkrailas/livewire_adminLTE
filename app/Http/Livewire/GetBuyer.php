@@ -25,6 +25,12 @@ class GetBuyer extends Component
 
     public function render()
     { 
-        return view('livewire.get-buyer');
+        $customers =  DB::table('customer')
+                    ->select('customerid','name')
+                    ->orderby('customerid')
+                    ->get();
+        return view('livewire.get-buyer',[
+            'customers' => $customers
+        ]);
     }
 }
