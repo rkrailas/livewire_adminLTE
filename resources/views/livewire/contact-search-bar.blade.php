@@ -9,9 +9,9 @@
             wire:keydown.enter="selectContact"
         >
 
-<div wire:loading class="absolute z-10 list-group bg-white w-full rounded-t-none shadow-lg">
+<!-- <div wire:loading class="absolute z-10 list-group bg-white w-full rounded-t-none shadow-lg">
     <div class="list-group-item list-group-item-action"><b>Search...</b></div>
-</div>
+</div> -->
 
 
         @if(!empty($query))

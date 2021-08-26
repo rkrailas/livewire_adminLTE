@@ -55,15 +55,11 @@ class ContactSearchBar extends Component
             if ($contact){
                 dd($contact);
             }
-        }
-        
-        
-        
+        }  
     }
 
     public function updatedQuery()
     {
-        //sleep(2);
         $data = DB::table('customer')
                         ->select('customerid','name')
                         ->where('name', 'LIKE', '%'.$this->query.'%')
